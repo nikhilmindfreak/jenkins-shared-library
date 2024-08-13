@@ -38,7 +38,7 @@ def call(Map configMap){
                 """
                 }
             }
-            stage('Build'){
+            /* stage('Build'){
                 steps{
                     sh """
                     zip -q -r ${component}-${appVersion}.zip * -x Jenkinsfile -x ${component}-${appVersion}.zip
@@ -111,7 +111,7 @@ def call(Map configMap){
                         }
                     }
                 }
-            }
+            } */
             
             /* stage('Nexus Artifact Upload'){
                 steps{
