@@ -29,15 +29,15 @@ def call(Map configMap){
                     }
                 }
             }
-            stage('Install Dependencies') {
-                steps {
-                sh """
-                    npm install
-                    ls -ltr
-                    echo "application version: $appVersion"
-                """
-                }
-            }
+            // stage('Install Dependencies') {
+            //     steps {
+            //     sh """
+            //         npm install
+            //         ls -ltr
+            //         echo "application version: $appVersion"
+            //     """
+            //     }
+            // }
             /* stage('Build'){
                 steps{
                     sh """
