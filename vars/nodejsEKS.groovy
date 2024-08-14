@@ -29,16 +29,16 @@ def call(Map configMap){
                     }
                 }
             }
-            // stage('Install Dependencies') {
-            //     steps {
-            //     sh """
-            //         npm install
-            //         ls -ltr
-            //         echo "application version: $appVersion"
-            //     """
-            //     }
-            // }
-            /* stage('Build'){
+            stage('Install Dependencies') {
+                steps {
+                sh """
+                    npm install
+                    ls -ltr
+                    echo "application version: $appVersion"
+                """
+                }
+            }
+            stage('Build'){
                 steps{
                     sh """
                     zip -q -r ${component}-${appVersion}.zip * -x Jenkinsfile -x ${component}-${appVersion}.zip
@@ -111,9 +111,9 @@ def call(Map configMap){
                         }
                     }
                 }
-            } */
+            }
             
-            /* stage('Nexus Artifact Upload'){
+            stage('Nexus Artifact Upload'){
                 steps{
                     script{
                         nexusArtifactUploader(
@@ -133,7 +133,7 @@ def call(Map configMap){
                         )
                     }
                 }
-            } */
+            }
         }
         post { 
             always { 
