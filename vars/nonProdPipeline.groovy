@@ -20,7 +20,7 @@
         parameters{
             // which component you want to deploy
             // which environment
-            // which version
+            // which version 
         }
         stages {
             stage('Deploy'){
